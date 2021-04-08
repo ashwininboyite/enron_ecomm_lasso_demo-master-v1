@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_0wb2acp" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
+  <decision id="Decision_0q87m1a" name="Model Test Comparator">
+    <decisionTable id="decisionTable_1" hitPolicy="COLLECT">
+      <input id="input_1" label="content_p-value" camunda:inputVariable="annual_inc_p-value">
+        <inputExpression id="inputExpression_1" typeRef="double" expressionLanguage="feel">
+          <text>annual_inc_p-value</text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="passes" name="passes" typeRef="boolean" />
+      <output id="OutputClause_05h1co6" label="reason" name="reason" typeRef="string" biodi:width="334" />
+      <rule id="DecisionRule_0aznir8">
+        <inputEntry id="UnaryTests_1x4xf13">
+          <text>&lt;= 0.05</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0a5bp3u">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07v4w07">
+          <text>"Email Content under threshold of 0.05"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ggwcp6">
+        <inputEntry id="UnaryTests_0lmlprd">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1id0elh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qpb76t">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="DMNDiagram_1h60r3q">
+      <dmndi:DMNShape id="DMNShape_188ppyp" dmnElementRef="Decision_0q87m1a">
+        <dc:Bounds height="80" width="180" x="530" y="150" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
